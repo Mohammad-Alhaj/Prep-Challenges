@@ -22,8 +22,6 @@ const findMax = (arr)=>{
 
   }
  
-
-
     return arr[max];
 }
 
@@ -71,7 +69,22 @@ const sumNums = (arr)=>{
 
 const reverseArray = (arr)=>{
  
+  let x;
+  let y=1;
+  for(let i=0;i<((arr.length )-1 );i++)
+  {
+   
+    for (let i = 0; i<((arr.length )-y); i++) {
+   x=arr[i];
+  arr[i]=arr[i+1];
   
+  arr[i+1]=x;
+  
+    }
+    
+    y++;
+  }
+  return arr;
   
  }
  
