@@ -21,14 +21,8 @@
 //  2- The first letters of the firstName and lastName should be capital letter
 
 const objLat = (obj) => {
-
-    let firstName= obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1);
-    let lastName= obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1);
-    let Age=obj.age
-    let Hobby=obj.hobby
-
-    let str=`my name is ${obj.firstName} ${obj.lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`;
-    return str;
+    let x = `my name is ${obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase() + obj.lastName.slice(1)} I am ${(obj.age)} YO, and I love ${(obj.hobby)}.`
+    return x;
 };
    
 
@@ -94,33 +88,17 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    var oneCvResult={ fullName:"",
-    tech:""}
-    let allCvResult=[]
-          for (let i = 0; i < cvs.length; i++) {
-      if(cvs[i].yearsOfExperience>1){
-    var oneCvResult={ fullName:"",
-    tech:""}
-    if(cvs[i].firstName==null&&cvs[i].lastName==null){
-                oneCvResult.fullName= ""
-    }
-    
-    else if(cvs[i].firstName==null&&cvs[i].lastName!=null){
-        
-                oneCvResult.fullName= cvs[i].lastName
-    }
-    else if(cvs[i].firstName!=null&&cvs[i].lastName==null){
-            oneCvResult.fullName= cvs[i].firstName
-    }
-    else
-            oneCvResult.fullName= cvs[i].firstName+" "+cvs[i].lastName
-            oneCvResult.tech=cvs[i].tech
-             allCvResult.push(oneCvResult)
-        }
-    }
-    
-            console.log(allCvResult)
-};  
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        const exam = arr[i];
+        if (exam.lastName === null && exam.yearsOfExperience > 1) {
+            arr2.push({ fullName: `${exam.firstName}`, tech: `${exam.tech}` });
+
+        } else if (exam.yearsOfExperience > 1) {
+            arr2.push({ fullName: `${exam.firstName} ${exam.lastName}`, tech: `${exam.tech}` });
+        } else continue;
+    } return arr2;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
