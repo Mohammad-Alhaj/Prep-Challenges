@@ -98,7 +98,33 @@ const cvFormatter = (arr) => {
             arr2.push({ fullName: `${exam.firstName} ${exam.lastName}`, tech: `${exam.tech}` });
         } else continue;
     } return arr2;
+
+      // console.log(arrResut)
 };
+// for (let index = 0; index < 4; index++) {
+//     if (this.yearsOfExperience<1) {
+
+//         yearsOfExperience=this.yearsOfExperience
+//             if (firstName==null) {
+//              var fullName=this.lastName
+//             }
+//             if (lastName==null) {
+//              fullName==this .firstName
+//             }
+//             else(
+//              fullName==this.firstName+this.lastName  
+//             )
+//         }
+//          var tech=this.tech
+     
+//        console.log(`fullName: ${fullName} ,${tech} ,`); 
+    
+// }
+  
+
+
+   
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
